@@ -1,0 +1,62 @@
+/* ShortenForm.css */
+
+.shorten-form-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.shorten-form-container h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #2e2e2e;
+  background: linear-gradient(90deg, rgba(0,36,255,1) 0%, rgba(255,0,150,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.shorten-form-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.shorten-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  width: 60%;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(12, 0, 121, 0.1);
+}
+
+.url-input {
+  flex: 1;
+  padding: 20px 20px;
+  border: none;
+  font-size: 16px;
+}
+
+.url-input:focus {
+  outline: none;
+}
+
+.shorten-button {
+  padding: 10px 20px;
+  background-color: #5BBCFF;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shorten-button:hover {
+  background-color: #FFFAB7;
+}

@@ -1,0 +1,31 @@
+/* Footer.css */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: #5BBCFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .footer-left {
+    font-weight: bold;
+  }
+  
+  .footer-right .footer-link {
+    color: white;
+    text-decoration: none;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-right .footer-link:hover {
+    background-color: #777;
+  }
+  

@@ -1,0 +1,73 @@
+/* AboutSection.css */
+
+.about-section {
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+    background-color: #ffffff;
+  }
+  
+  .about-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .highlight-bar {
+    background-color: #00C853; /* Use a green color for the highlight bar */
+    color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .about-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    color: #333;
+  }
+  
+  .about-card h3 {
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .about-card p {
+    color: #333;
+  }
+  
+  .about-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #57a1f0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .about-card button:hover {
+    background-color: #FFFAB7;
+  }
+  
+  @media (max-width: 768px) {
+    .about-card {
+      min-width: 100%;
+    }
+  }
+  

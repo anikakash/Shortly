@@ -1,0 +1,73 @@
+/* LinkTable.css */
+
+.table-container {
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+    background-color: #f7f4f446;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+  }
+  
+  .link-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;
+  }
+  
+  .link-table thead {
+    background-color: #5BBCFF;
+  }
+  
+  .link-table th, .link-table td {
+    padding: 10px;
+    text-align: left;
+    /* border-bottom: 1px solid #726969; */
+    white-space: nowrap;
+  }
+  
+  .link-table th {
+    font-weight: bold;
+  }
+  
+  .link-table tr:hover {
+    background-color: #FFD1E3;
+  }
+  
+  .link-table button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #57a1f0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .link-table button:hover {
+    background-color: #FFFAB7;
+  }
+  
+  .original-url {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  @media (max-width: 768px) {
+    .link-table th, .link-table td {
+      padding: 8px;
+    }
+  
+    .original-url {
+      max-width: 150px;
+    }
+  
+    .link-table button {
+      padding: 4px 8px;
+      margin: 0 3px;
+    }
+  }
+  
