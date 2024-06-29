@@ -27,14 +27,15 @@ function generateShortUrl() {
 
 // Unique Short Checker.
 // Time Complexity: Best/Average Case O(1) , Wrost Case O(n).
+// ShortId 
 async function getUniqueShortUrl() {
   let shortUrl;
   let isUnique = false;
 
   while (!isUnique) {
     shortUrl = generateShortUrl();
-    const existingUrl = await urlModel.findOne({ shortUrl });
-    if (!existingUrl) {
+    const isExistingUrl = await urlModel.findOne({ shortUrl });
+    if (!isExistingUrl) {
       isUnique = true;
     }
   }
@@ -47,7 +48,7 @@ async function getUniqueShortUrl() {
 // Method: Post
 // API END Point: http://localhost:8000/api/shortner
 
-const urlShortnerMaker = async (req, res) => {
+const urlShortner = async (req, res) => {
   try {
     const { originalUrl } = req.body;
     // console.log(`Received original URL: ${originalUrl}`);
@@ -61,13 +62,13 @@ const urlShortnerMaker = async (req, res) => {
     let url = await urlModel.findOne({ originalUrl });
     if (url) {
       return res.json(url);
-    } else {
+    } 
       const shortUrl = await getUniqueShortUrl();
       url = new urlModel({ originalUrl, shortUrl });
       await url.save();
       // console.log("Short URL generated and saved.");
       return res.status(201).json(url);
-    }
+    
   } catch (error) {
     console.log("Error occurred:", error);
     res.status(500).json({ Message: error.message });
@@ -114,7 +115,7 @@ const getAllShortedUrl = async (req, res) => {
 
 // export api functions
 module.exports = {
-  urlShortnerMaker,
+  urlShortner,
   shortUrlAccess,
   getAllShortedUrl
 };

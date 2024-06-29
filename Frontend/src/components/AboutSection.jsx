@@ -14,7 +14,7 @@ const AboutSection = () => {
           <p>Our URL shortener provides robust analytics to track your link performance, ensuring you make data-driven decisions.</p>
           <button>Read more</button>
         </div>
-        <div className="about-card" style={{ backgroundColor: '#FFD1E3' }}>
+        <div className="about-card" style={{ backgroundColor: '#00C853' }}>
           <h3>Feature Two</h3>
           <p>With our service, you can customize your short URLs to better represent your brand or business.</p>
           <button>Read more</button>

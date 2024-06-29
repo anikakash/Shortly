@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import LinkTable from './components/LinkTable';
 import NavBar from './components/NavBar';
 import ShortenForm from './components/ShortenForm';
+import './main.css';
 
 const App = () => {
   const [links, setLinks] = useState([
@@ -23,7 +24,7 @@ const App = () => {
     <>
       <NavBar />
       <ShortenForm />
-      <LinkTable links={links} />
+      <LinkTable />
       <AboutSection />
       <Footer/>
     </>
@@ -31,3 +32,6 @@ const App = () => {
 };
 
 export default App;
+
+
+

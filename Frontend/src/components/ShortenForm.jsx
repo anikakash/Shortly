@@ -19,6 +19,7 @@ const ShortenForm = () => {
     try {
       const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/shortner`, url);
       console.log(response.data); // Handle the response accordingly
+      window.location.href="/"
     } catch (error) {
       console.log(error);
     }

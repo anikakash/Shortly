@@ -2,14 +2,14 @@ const express = require("express");
 const router = express.Router();
 
 const {
-    urlShortnerMaker,
+    urlShortner,
     shortUrlAccess,
     getAllShortedUrl
 } = require("../Controller/url.controller.js")
 
 
-router.post("/shortner", urlShortnerMaker);
+router.post("/shortner", urlShortner);
 router.get("/:shortId", shortUrlAccess);
-router.get("/all", getAllShortedUrl);
+router.get("/get/all", getAllShortedUrl);
 
 module.exports = router;
