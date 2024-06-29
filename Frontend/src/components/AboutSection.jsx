@@ -11,7 +11,7 @@ const AboutSection = () => {
       <div className="cards-container">
         <div className="about-card" style={{ backgroundColor: '#5BBCFF' }}>
           <h3>Feature One</h3>
-          <p>Our URL shortener provides robust analytics to track your link performance, ensuring you make data-driven decisions.</p>
+          <p>Introducing User Management in our next update, offering personalized views and enhanced user experience. Coming Soon!</p>
           <button>Read more</button>
         </div>
         <div className="about-card" style={{ backgroundColor: '#00C853' }}>
@@ -25,6 +25,7 @@ const AboutSection = () => {
           <button>Read more</button>
         </div>
       </div>
+
     </div>
   );
 };
