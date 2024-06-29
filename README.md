@@ -27,7 +27,7 @@ For validating URLs, a custom function (isValidUrl) is used. This function check
 
 2. isValidUrl:
 
-    Average Case: O(n)
+    Average Case: O(1)
     Worst Case: O(n)
 
 # Setup : 
@@ -63,6 +63,7 @@ For validating URLs, a custom function (isValidUrl) is used. This function check
         Method: GET
        
      Response: 
+
     ![shortner maker ](./api_response_redirect.PNG)
 
 # Frontend Testing:
