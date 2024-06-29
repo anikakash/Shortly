@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require("cors");
 const shortnerRoute = require('./Routes/url.route.js');
 
 const app = express();
@@ -8,7 +9,12 @@ app.use(express.json());
 const mongoUri = 'mongodb+srv://anik:Map58yPvELVsnbO2@jobproject.t2xjchd.mongodb.net/Shortner';
 const PORT = 8000;
 
-
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+  ],
+  // credentials: true
+}));
 // Defin routes.
 app.use('/api', shortnerRoute);
 
