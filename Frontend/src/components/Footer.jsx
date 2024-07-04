@@ -4,7 +4,16 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-left">Made by anikakash</div>
+      <div className="footer-left">
+        Made by  
+        <a
+          href="https://www.linkedin.com/in/anikakash/"
+          target="_blank"
+          
+        >
+          anikakash
+        </a>
+        </div>
       <div className="footer-right">
         <a
           href="https://github.com/anikakash/urlShortner"

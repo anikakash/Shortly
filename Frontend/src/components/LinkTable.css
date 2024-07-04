@@ -17,7 +17,7 @@
   }
   
   .link-table thead {
-    background-color: #5BBCFF;
+    background-color: #00C853;
   }
   
   .link-table th, .link-table td {
@@ -32,7 +32,7 @@
   }
   
   .link-table tr:hover {
-    background-color: #FFD1E3;
+    background-color: #00C853;
   }
   
   .link-table button {
