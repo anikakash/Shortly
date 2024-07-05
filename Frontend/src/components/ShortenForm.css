@@ -60,3 +60,39 @@
 .shorten-button:hover {
   background-color: #FFFAB7;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input-group {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .url-input {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .shorten-button {
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-group {
+    width: 100%;
+  }
+
+  .url-input {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .shorten-button {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

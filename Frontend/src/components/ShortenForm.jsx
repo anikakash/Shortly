@@ -4,7 +4,7 @@ import './ShortenForm.css';
 
 const ShortenForm = () => {
   const [url, setUrl] = useState({
-    originalUrl: ""
+    originalUrl: ''
   });
 
   const inputOnChange = (property, value) => {
@@ -17,9 +17,9 @@ const ShortenForm = () => {
   const shortUrl = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:8000/api/shortner`, url);
+      const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/shortner`, url);
       console.log(response.data); // Handle the response accordingly
-      window.location.href="/"
+      window.location.href = '/';
     } catch (error) {
       console.log(error);
     }
@@ -32,7 +32,7 @@ const ShortenForm = () => {
       <form onSubmit={shortUrl} className="shorten-form">
         <div className="input-group">
           <input 
-            onChange={(e) => { inputOnChange("originalUrl", e.target.value); }}
+            onChange={(e) => { inputOnChange('originalUrl', e.target.value); }}
             value={url.originalUrl}
             type="url" 
             placeholder="Enter The URL Here" 

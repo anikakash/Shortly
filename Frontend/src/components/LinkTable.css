@@ -1,73 +1,99 @@
 /* LinkTable.css */
 
 .table-container {
-    margin: 20px auto;
-    padding: 10px;
-    width: 60%;
-    background-color: #f7f4f446;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    overflow-x: auto;
+  margin: 20px auto;
+  padding: 10px;
+  width: 60%;
+  background-color: #f7f4f446;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+}
+
+.link-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000000;
+}
+
+.link-table thead {
+  background-color: #00C853;
+}
+
+.link-table th, .link-table td {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.link-table th {
+  font-weight: bold;
+}
+
+.link-table tr:hover {
+  background-color: #00C853;
+}
+
+.link-table button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #57a1f0;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.link-table button:hover {
+  background-color: #FFFAB7;
+}
+
+.original-url {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-container {
+    width: 90%;
+    padding: 5px;
   }
-  
-  .link-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: #000000;
-  }
-  
-  .link-table thead {
-    background-color: #00C853;
-  }
-  
+
   .link-table th, .link-table td {
-    padding: 10px;
-    text-align: left;
-    /* border-bottom: 1px solid #726969; */
-    white-space: nowrap;
+    padding: 8px;
   }
-  
-  .link-table th {
-    font-weight: bold;
-  }
-  
-  .link-table tr:hover {
-    background-color: #00C853;
-  }
-  
-  .link-table button {
-    padding: 5px 10px;
-    margin: 0 5px;
-    background-color: #57a1f0;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .link-table button:hover {
-    background-color: #FFFAB7;
-  }
-  
+
   .original-url {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: 150px;
   }
-  
-  @media (max-width: 768px) {
-    .link-table th, .link-table td {
-      padding: 8px;
-    }
-  
-    .original-url {
-      max-width: 150px;
-    }
-  
-    .link-table button {
-      padding: 4px 8px;
-      margin: 0 3px;
-    }
+
+  .link-table button {
+    padding: 4px 8px;
+    margin: 0 3px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    width: 100%;
+    padding: 2px;
+  }
+
+  .link-table th, .link-table td {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  .original-url {
+    max-width: 100px;
+  }
+
+  .link-table button {
+    padding: 3px 6px;
+    margin: 0 2px;
+    font-size: 14px;
+  }
+}

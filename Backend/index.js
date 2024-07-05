@@ -1,35 +1,29 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require("cors");
+const cors = require('cors');
+require('dotenv').config();
 const shortnerRoute = require('./Routes/url.route.js');
 
 const app = express();
 app.use(express.json());
 
-const mongoUri = 'mongodb+srv://anik:Map58yPvELVsnbO2@jobproject.t2xjchd.mongodb.net/Shortner';
-const PORT = 8000;
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-  ],
-  // credentials: true
-}));
-// Defin routes.
+app.use(cors());
+
+// Define routes
 app.use('/api', shortnerRoute);
 
 // Build Connection with DB and run server.
 mongoose
-  .connect(mongoUri)
+  .connect(process.env.mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
-    console.log("Connect to database!");
-    app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+    console.log('Connected to database!');
+    app.listen(process.env.PORT, () => {
+      console.log(`Server is running on port ${process.env.PORT}`);
     });
   })
-  .catch(() => {
-    console.log("DB Connection faild!");
+  .catch((err) => {
+    console.log('DB Connection failed!', err);
   });
 
-
-  module.exports = app;
+module.exports = app;

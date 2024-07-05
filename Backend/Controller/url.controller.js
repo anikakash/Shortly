@@ -75,6 +75,24 @@ const urlShortner = async (req, res) => {
   }
 };
 
+const allShortedUrl = async (req, res) => {
+  try {
+    const urls = await urlModel.find({}).sort({ createdAt: -1 });
+    console.log("URLs retrieved from database:", urls); // Log the retrieved URLs
+
+    if (urls.length > 0) {
+      return res.status(200).json(urls);
+    } else {
+      console.log("No URLs found in the database.");
+      return res.status(404).json('URL not found');
+    }
+  } catch (error) {
+    console.log("Error occurred:", error);
+    return res.status(500).json({ Message: error.message });
+  }
+};
+
+
 // API Function :
 // Method: GET
 // API END Point: http://localhost:8000/api/:shortId
@@ -94,22 +112,7 @@ const shortUrlAccess = async (req, res) => {
 };
 
 
-const getAllShortedUrl = async (req, res) => {
-  try {
-    const urls = await urlModel.find({}).sort({ createdAt: -1 });
-    console.log("URLs retrieved from database:", urls); // Log the retrieved URLs
 
-    if (urls.length > 0) {
-      return res.status(200).json(urls);
-    } else {
-      console.log("No URLs found in the database.");
-      return res.status(404).json('URL not found');
-    }
-  } catch (error) {
-    console.log("Error occurred:", error);
-    return res.status(500).json({ Message: error.message });
-  }
-};
 
 
 
@@ -117,5 +120,5 @@ const getAllShortedUrl = async (req, res) => {
 module.exports = {
   urlShortner,
   shortUrlAccess,
-  getAllShortedUrl
+  allShortedUrl
 };
