@@ -10,8 +10,6 @@ const LinkTable = () => {
 
   const [urls, setUrls] = useState([]);
 
-  const BASE_URL = "http://localhost:8000/api/"; // Replace this with your actual base URL
-
   useEffect(() => {
     const getAllUrl = async () => {
       try {
@@ -38,7 +36,6 @@ const LinkTable = () => {
             <th>Short URL</th>
             <th>Copy</th>
             <th>Created Date</th>
-            {/* <th>Action</th> */}
           </tr>
         </thead>
         <tbody>
@@ -49,15 +46,11 @@ const LinkTable = () => {
                   <span>{link.originalUrl}</span>
                 </div>
               </td>
-              <td>{BASE_URL + link.shortUrl}</td>
+              <td>{import.meta.env.VITE_API_BASE_URL+'/' + link.shortUrl}</td>
               <td>
-                <button onClick={() => copyToClipboard(BASE_URL + link.shortUrl)}>Copy</button>
+                <button onClick={() => copyToClipboard(import.meta.env.VITE_API_BASE_URL+'/'+ link.shortUrl)}>Copy</button>
               </td>
               <td>{formatDate(link.createdAt)}</td>
-              {/* <td>
-                <button>Edit</button>
-                <button>Delete</button>
-              </td> */}
             </tr>
           ))}
         </tbody>
