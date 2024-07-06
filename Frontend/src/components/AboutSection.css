@@ -67,7 +67,7 @@
   
   @media (max-width: 768px) {
     .about-card {
-      min-width: 100%;
+      min-width: 80%;
     }
   }
   
