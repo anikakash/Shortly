@@ -40,3 +40,62 @@
 .navbar-button:hover {
   background-color: #777;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-buttons {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #5BBCFF;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .navbar-buttons.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+
+  .menu-toggle .bar.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .navbar-button {
+    padding: 8px 15px;
+  }
+}

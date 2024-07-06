@@ -1,31 +1,53 @@
 /* Footer.css */
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #5BBCFF;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-link-left {
+  margin-left: 5px; /* Add space between "Made by" and the link */
+}
+
+.footer-right .footer-link {
+  color: white;
+  text-decoration: none;
+  background-color: #555;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.footer-right .footer-link:hover {
+  background-color: #777;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
     margin-bottom: 10px;
-    background-color: #5BBCFF;
-    color: white;
-    border-radius: 5px;
-    font-size: 1rem;
   }
-  
-  .footer-left {
-    font-weight: bold;
-  }
-  
+
   .footer-right .footer-link {
-    color: white;
-    text-decoration: none;
-    background-color: #555;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    width: 100%;
+    padding: 10px 10px;
   }
-  
-  .footer-right .footer-link:hover {
-    background-color: #777;
-  }
-  
+}
