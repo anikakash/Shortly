@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-left">
-        Made by  
+        Made by 
         <a
           href="https://www.linkedin.com/in/anikakash/"
           target="_blank"
-          
-        >
+          className="footer-link-left"
+          >
           anikakash
         </a>
         </div>
