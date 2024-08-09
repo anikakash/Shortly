@@ -1,6 +1,6 @@
 # Shortly - your url shortner solutations:
 This project implements a URL shortener service that generates a unique 6-character string for each provided URL. It includes both frontend and backend components, implemented with custom functions instead of relying on npm packages for URL shortening.
-Designe: https://dribbble.com/shots/21484015-RX-link-URL-Shortener-Website?utm_source=Clipboard_Shot&utm_campaign=Shorif0922&utm_content=RX.link%20-%20URL%20Shortener%20Website&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Shorif0922&utm_content=RX.link%20-%20URL%20Shortener%20Website&utm_medium=Social_Share
+Designe: [from Dribble](https://dribbble.com/shots/21484015-RX-link-URL-Shortener-Website?utm_source=Clipboard_Shot&utm_campaign=Shorif0922&utm_content=RX.link%20-%20URL%20Shortener%20Website&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Shorif0922&utm_content=RX.link%20-%20URL%20Shortener%20Website&utm_medium=Social_Share)
 # User Interface:
 ![Shorten URL UI](./UI.png)
 
